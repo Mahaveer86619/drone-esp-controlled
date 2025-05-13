@@ -117,3 +117,39 @@ void send_rc_override() {
     send_mavlink_message();
 }
 ```
+## System Requirements
+
+### Hardware
+- ESP32 development board
+- Flight controller with MAVLink support
+- USB camera (for gesture control)
+- WiFi network
+
+### Software Dependencies
+- Python 3.7+
+  - OpenCV
+  - MediaPipe
+  - tkinter
+- Arduino IDE with ESP32 support
+- MAVLink library
+
+## Setup Instructions
+
+1. Flash ESP32 with the provided firmware
+2. Connect ESP32 to flight controller via UART
+3. Install Python dependencies
+4. Configure WiFi settings in ESP32 code
+5. Launch control interface:
+   ```bash
+   python gui_control.py
+   ```
+
+## Safety Features
+
+- Automatic failsafe landing
+- Command timeout protection
+- Signal strength monitoring
+- Battery voltage monitoring
+- Emergency stop function
+- Smooth control transitions
+- Multiple control redundancy
